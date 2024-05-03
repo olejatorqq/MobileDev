@@ -5,19 +5,17 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Рекламный блок AdView (вверх экрана) -->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         ads:adSize="BANNER"
-        ads:adUnitId="ваш_идентификатор_рекламного_блока"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp">
     </com.google.android.gms.ads.AdView>
 
-    <!-- Аватар пользователя -->
     <ImageView
         android:id="@+id/imageViewAvatar"
         android:layout_width="120dp"
@@ -29,7 +27,6 @@
         android:layout_marginTop="32dp"
         android:contentDescription="@string/walter_white" />
 
-    <!-- Имя пользователя -->
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="match_parent"
@@ -40,7 +37,6 @@
         android:layout_below="@id/imageViewAvatar"
         android:layout_marginTop="16dp"/>
 
-    <!-- Поле ввода даты рождения -->
     <EditText
         android:id="@+id/editTextBirthday"
         android:layout_width="match_parent"
@@ -50,7 +46,6 @@
         android:layout_below="@id/textViewName"
         android:layout_marginTop="16dp"/>
 
-    <!-- Поле ввода адреса электронной почты -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
@@ -60,7 +55,6 @@
         android:layout_below="@id/editTextBirthday"
         android:layout_marginTop="16dp"/>
 
-    <!-- Поле ввода номера телефона -->
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="match_parent"
@@ -70,7 +64,6 @@
         android:layout_below="@id/editTextEmail"
         android:layout_marginTop="16dp"/>
 
-    <!-- Выбор пола пользователя -->
     <RadioGroup
         android:id="@+id/radioGroupGender"
         android:layout_width="match_parent"
@@ -93,7 +86,6 @@
             android:text="Женский"/>
     </RadioGroup>
 
-    <!-- Кнопка "Сохранить" (более стильная) -->
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"

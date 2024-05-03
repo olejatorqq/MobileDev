@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Рекламный блок AdView (вверх экрана) -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ваш_идентификатор_рекламного_блока"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+    </com.google.android.gms.ads.AdView>
+
+    <!-- Аватар пользователя -->
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/walter_white"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/walter_white" />
+
+    <!-- Имя пользователя -->
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Имя пользователя"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/imageViewAvatar"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Поле ввода даты рождения -->
+    <EditText
+        android:id="@+id/editTextBirthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Дата рождения"
+        android:inputType="date"
+        android:layout_below="@id/textViewName"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Поле ввода адреса электронной почты -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/editTextBirthday"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Поле ввода номера телефона -->
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Номер телефона"
+        android:inputType="phone"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Выбор пола пользователя -->
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/editTextPhone"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мужской"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Женский"/>
+    </RadioGroup>
+
+    <!-- Кнопка "Сохранить" (более стильная) -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_below="@id/radioGroupGender"
+        android:layout_marginTop="32dp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:stateListAnimator="@null"
+        android:elevation="0dp"/>
+
+</RelativeLayout>

@@ -1,77 +1,51 @@
 package ru.mirea.orlovsky.lesson1;
 
-import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import ru.mirea.orlovsky.lesson1.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    private ImageView imageViewAvatar;
+    private TextView textViewName;
+    private EditText editTextBirthday, editTextEmail, editTextPhone;
+    private RadioGroup radioGroupGender;
+    private RadioButton radioButtonMale, radioButtonFemale;
+    private Button buttonSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.lesson1_layout);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        imageViewAvatar = findViewById(R.id.imageViewAvatar);
+        textViewName = findViewById(R.id.textViewName);
+        editTextBirthday = findViewById(R.id.editTextBirthday);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPhone = findViewById(R.id.editTextPhone);
+        radioGroupGender = findViewById(R.id.radioGroupGender);
+        radioButtonMale = findViewById(R.id.radioButtonMale);
+        radioButtonFemale = findViewById(R.id.radioButtonFemale);
+        buttonSave = findViewById(R.id.buttonSave);
 
-        setSupportActionBar(binding.toolbar);
+        textViewName.setText("Имя пользователя");
+        imageViewAvatar.setImageResource(R.drawable.walter_white);
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        buttonSave.setOnClickListener(view -> {
+            String birthday = editTextBirthday.getText().toString();
+            String email = editTextEmail.getText().toString();
+            String phone = editTextPhone.getText().toString();
+            String gender = radioButtonMale.isChecked() ? "Мужской" : "Женский";
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
-            }
+            System.out.println("Дата рождения: " + birthday);
+            System.out.println("Email: " + email);
+            System.out.println("Номер телефона: " + phone);
+            System.out.println("Пол: " + gender);
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
     }
 }

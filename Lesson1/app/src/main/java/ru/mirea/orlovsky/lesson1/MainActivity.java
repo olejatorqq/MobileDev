@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         radioButtonFemale = findViewById(R.id.radioButtonFemale);
         buttonSave = findViewById(R.id.buttonSave);
 
-        textViewName.setText("Имя пользователя");
+        textViewName.setText("Walter White");
         imageViewAvatar.setImageResource(R.drawable.walter_white);
 
         buttonSave.setOnClickListener(view -> {

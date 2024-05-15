@@ -27,6 +27,12 @@
           <timeTargetWasSelectedWithDropDown value="2024-05-15T10:52:36.850289Z" />
         </State>
       </entry>
+      <entry key="notificationapp">
+        <State />
+      </entry>
+      <entry key="toastapp">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

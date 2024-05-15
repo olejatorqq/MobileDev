@@ -1,4 +1,4 @@
-# WW contact updater
+# Lesson 2
 
 Этот проект представляет собой простое приложение для Android, разработанное с использованием Java и Android SDK.
 

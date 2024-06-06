@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="ru.mirea.orlovsky.thread.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvThreadName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Thread"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvAveragePairs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Pairs"
+            android:textSize="18sp"
+            android:layout_below="@id/tvThreadName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etTotalPairs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Total Pairs"
+            android:inputType="number"
+            android:layout_below="@id/tvAveragePairs"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etTotalDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Total Days"
+            android:inputType="number"
+            android:layout_below="@id/etTotalPairs"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_below="@id/etTotalDays"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your age"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/editTextJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your job"
+            android:layout_below="@id/editTextAge"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonMirea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_below="@id/editTextJob"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textViewMirea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мой номер по списку No___"
+            android:layout_below="@id/buttonMirea"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
+</layout>

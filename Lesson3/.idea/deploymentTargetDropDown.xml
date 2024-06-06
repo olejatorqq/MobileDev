@@ -18,6 +18,9 @@
           <timeTargetWasSelectedWithDropDown value="2024-06-06T06:17:05.361212300Z" />
         </State>
       </entry>
+      <entry key="app.favoritebook">
+        <State />
+      </entry>
       <entry key="app.intentapp">
         <State>
           <targetSelectedWithDropDown>
@@ -33,6 +36,21 @@
           </targetSelectedWithDropDown>
           <timeTargetWasSelectedWithDropDown value="2024-06-06T06:23:19.499174300Z" />
         </State>
+      </entry>
+      <entry key="favoritebook">
+        <State />
+      </entry>
+      <entry key="mireaproject">
+        <State />
+      </entry>
+      <entry key="sharer">
+        <State />
+      </entry>
+      <entry key="simplefragmentapp">
+        <State />
+      </entry>
+      <entry key="systemintentsapp">
+        <State />
       </entry>
     </value>
   </component>
